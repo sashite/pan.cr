@@ -1,6 +1,6 @@
 # The PAN (Portable Action Notation) module
 module PAN
-  VERSION = "0.1.0"
+  VERSION = "0.1.1"
 
   def self.dump(*actions)
     Dumper.call(*actions)
