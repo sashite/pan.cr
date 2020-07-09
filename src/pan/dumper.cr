@@ -5,7 +5,7 @@ module PAN
   class Dumper < Action
     def self.call(*actions)
       actions.map { |action_items| new(*action_items).call }
-             .join(separator)
+        .join(separator)
     end
 
     @src_square : String

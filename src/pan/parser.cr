@@ -5,7 +5,7 @@ module PAN
   class Parser < Action
     def self.call(serialized_move : String)
       serialized_move.split(separator)
-                     .map { |serialized_action| new(serialized_action).call }
+        .map { |serialized_action| new(serialized_action).call }
     end
 
     @src_square : Int32 | Nil
@@ -15,7 +15,7 @@ module PAN
 
     def initialize(serialized_action : String)
       action_args = serialized_action.split(separator)
-      src_square  = action_args[0]
+      src_square = action_args[0]
       @src_square = (src_square == drop_char ? nil : src_square.to_i)
       @dst_square = action_args[1].to_i
       @piece_name = action_args[2]
